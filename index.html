@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura | Premium Lifestyle</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --accent: #4a4e69;
+            --bg-color: #f8f9fa;
+            --card-bg: rgba(255, 255, 255, 0.7);
+            --text-main: #2b2d42;
+            --text-muted: #8d99ae;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        nav .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(2px);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            padding: 3rem 4rem;
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            background: linear-gradient(45deg, #1a1a2e, #4a4e69);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--accent);
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(26, 26, 46, 0.2);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px rgba(26, 26, 46, 0.3);
+            background: #2b2d42;
+        }
+
+        /* Products Section */
+        .products-section {
+            padding: 5rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--primary);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .product-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-icon {
+            font-size: 5rem;
+            margin-bottom: 1.5rem;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-icon {
+            transform: scale(1.1);
+        }
+
+        .icon-headphones {
+            background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+        }
+
+        .icon-watch {
+            background: linear-gradient(135deg, #89f7fe, #66a6ff);
+        }
+
+        .icon-bag {
+            background: linear-gradient(135deg, #f6d365, #fda085);
+        }
+
+        .icon-sunglasses {
+            background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+        }
+
+        .icon-speaker {
+            background: linear-gradient(135deg, #ffecd2, #fcb69f);
+        }
+
+        .product-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .product-price {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #ef233c;
+            margin-bottom: 1rem;
+        }
+
+        .product-desc {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+
+        .buy-btn {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            padding: 0.8rem 2rem;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            font-size: 1.1rem;
+        }
+
+        .buy-btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem;
+            background: var(--primary);
+            color: white;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">AURA.</div>
+        <div>
+            <button class="btn"
+                style="padding: 0.6rem 1.5rem; font-size: 1rem; margin-right: 10px; background: transparent; border: 1px solid var(--primary); color: var(--primary);"
+                onclick="handleUserLogin()">Login</button>
+            <a href="#products" class="btn" style="padding: 0.6rem 1.5rem; font-size: 1rem;">Shop Now</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Elevate Your Lifestyle</h1>
+            <p>Discover our collection of premium, meticulously crafted essentials.</p>
+            <a href="collection.html" class="btn">Explore Collection</a>
+        </div>
+    </section>
+
+    <section class="products-section" id="products">
+        <h2 class="section-title">Featured Products</h2>
+        <div class="grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-icon icon-headphones">🎧</div>
+                <h3 class="product-title">Aura Sonic Pro</h3>
+                <p class="product-desc">Immersive active noise cancellation with premium acoustic tuning.</p>
+                <div class="product-price">$299</div>
+                <button class="buy-btn" onclick="window.location.href='cart.html'">Add to Cart</button>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-icon icon-watch">⌚</div>
+                <h3 class="product-title">Nova Timepiece</h3>
+                <p class="product-desc">Advanced health tracking meets minimalist modern design.</p>
+                <div class="product-price">$199</div>
+                <button class="buy-btn" onclick="window.location.href='cart.html'">Add to Cart</button>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-icon icon-bag">🎒</div>
+                <h3 class="product-title">Urban Commuter Bag</h3>
+                <p class="product-desc">Premium cognac leather with smart organization compartments.</p>
+                <div class="product-price">$149</div>
+                <button class="buy-btn" onclick="window.location.href='cart.html'">Add to Cart</button>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-icon icon-sunglasses">🕶️</div>
+                <h3 class="product-title">Classic Aviators</h3>
+                <p class="product-desc">Polarized lenses with a lightweight, durable gold frame.</p>
+                <div class="product-price">$129</div>
+                <button class="buy-btn" onclick="window.location.href='cart.html'">Add to Cart</button>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card">
+                <div class="product-icon icon-speaker">🔊</div>
+                <h3 class="product-title">Aura Boom 360</h3>
+                <p class="product-desc">Portable 360-degree sound with deep bass and waterproof design.</p>
+                <div class="product-price">$89</div>
+                <button class="buy-btn" onclick="window.location.href='cart.html'">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Aura Premium Lifestyle. All rights reserved.</p>
+    </footer>
+
+    <script src="./identity.min.js"></script>
+    <script>
+        Identity.init('productsite', '6m6qFkBxZ5G7i_I48V90FEYF7akbog7pg2bOs06NlEY', {
+            apiUrl: 'https://choiceless-lakeesha-ichthyophagous.ngrok-free.dev',
+            debug: true
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart | Aura</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif; }
+        body { background-color: #f8f9fa; color: #2b2d42; display: flex; flex-direction: column; min-height: 100vh; }
+        nav { padding: 1.5rem 5%; background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); box-shadow: 0 2px 20px rgba(0,0,0,0.05); }
+        nav .logo { font-size: 1.8rem; font-weight: 700; letter-spacing: 2px; color: #1a1a2e; text-decoration: none; }
+        .cart-container { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem; }
+        .cart-icon { font-size: 5rem; margin-bottom: 1rem; color: #4a4e69; }
+        h1 { font-size: 2.5rem; color: #1a1a2e; margin-bottom: 1rem; }
+        p { font-size: 1.2rem; color: #8d99ae; margin-bottom: 2rem; }
+        .btn { padding: 1rem 2.5rem; font-size: 1.1rem; background: #1a1a2e; color: white; border: none; border-radius: 30px; text-decoration: none; transition: 0.3s; }
+        .btn:hover { background: #2b2d42; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(26,26,46,0.2); }
+    </style>
+</head>
+<body>
+    <nav style="display: flex; justify-content: space-between; align-items: center;">
+        <a href="index.html" class="logo">AURA.</a>
+        <button class="btn" style="padding: 0.5rem 1.2rem; font-size: 0.9rem; cursor: pointer;" onclick="handleUserLogin()">Login</button>
+    </nav>
+    <div class="cart-container">
+        <div class="cart-icon">🛒</div>
+        <h1>Item Added to Cart!</h1>
+        <p>You can proceed to checkout or continue shopping for more premium lifestyle products.</p>
+        <a href="index.html" class="btn">Continue Shopping</a>
+    </div>
+    <script src="./identity.min.js"></script>
+    <script src="./analytics.js"></script>
+</body>
+</html>
