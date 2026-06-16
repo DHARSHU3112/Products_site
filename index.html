@@ -217,22 +217,53 @@
             flex-grow: 1;
         }
 
+        .card-buttons {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: auto;
+        }
+
         .buy-btn {
             background: transparent;
             color: var(--primary);
             border: 2px solid var(--primary);
-            padding: 0.8rem 2rem;
+            padding: 0.8rem 1.2rem;
             border-radius: 25px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
-            width: 100%;
-            font-size: 1.1rem;
+            flex: 1;
+            font-size: 1rem;
         }
 
         .buy-btn:hover {
             background: var(--primary);
             color: white;
+        }
+
+        .tutorial-btn {
+            padding: 0.8rem 1.2rem;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex: 1;
+            font-size: 1rem;
+            border: none;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .tutorial-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+            background: linear-gradient(135deg, #764ba2, #667eea);
         }
 
         @keyframes fadeIn {
@@ -287,7 +318,10 @@
                 <h3 class="product-title">Aura Sonic Pro</h3>
                 <p class="product-desc">Immersive active noise cancellation with premium acoustic tuning.</p>
                 <div class="product-price">$299</div>
-                <button class="buy-btn" onclick="window.location.href='cart.html'">Add to Cart</button>
+                <div class="card-buttons">
+                    <button class="buy-btn" onclick="window.location.href='cart.html'">Add to Cart</button>
+                    <a href="https://test-mu-ten-20.vercel.app/" target="_blank" class="tutorial-btn">📘 Tutorial</a>
+                </div>
             </div>
 
             <!-- Product 2 -->
@@ -296,7 +330,10 @@
                 <h3 class="product-title">Nova Timepiece</h3>
                 <p class="product-desc">Advanced health tracking meets minimalist modern design.</p>
                 <div class="product-price">$199</div>
-                <button class="buy-btn" onclick="window.location.href='cart.html'">Add to Cart</button>
+                <div class="card-buttons">
+                    <button class="buy-btn" onclick="window.location.href='cart.html'">Add to Cart</button>
+                    <a href="https://test-mu-ten-20.vercel.app/" target="_blank" class="tutorial-btn">📘 Tutorial</a>
+                </div>
             </div>
 
             <!-- Product 3 -->
@@ -305,7 +342,10 @@
                 <h3 class="product-title">Urban Commuter Bag</h3>
                 <p class="product-desc">Premium cognac leather with smart organization compartments.</p>
                 <div class="product-price">$149</div>
-                <button class="buy-btn" onclick="window.location.href='cart.html'">Add to Cart</button>
+                <div class="card-buttons">
+                    <button class="buy-btn" onclick="window.location.href='cart.html'">Add to Cart</button>
+                    <a href="https://test-mu-ten-20.vercel.app/" target="_blank" class="tutorial-btn">📘 Tutorial</a>
+                </div>
             </div>
 
             <!-- Product 4 -->
@@ -314,7 +354,10 @@
                 <h3 class="product-title">Classic Aviators</h3>
                 <p class="product-desc">Polarized lenses with a lightweight, durable gold frame.</p>
                 <div class="product-price">$129</div>
-                <button class="buy-btn" onclick="window.location.href='cart.html'">Add to Cart</button>
+                <div class="card-buttons">
+                    <button class="buy-btn" onclick="window.location.href='cart.html'">Add to Cart</button>
+                    <a href="https://test-mu-ten-20.vercel.app/" target="_blank" class="tutorial-btn">📘 Tutorial</a>
+                </div>
             </div>
 
             <!-- Product 5 -->
@@ -323,7 +366,10 @@
                 <h3 class="product-title">Aura Boom 360</h3>
                 <p class="product-desc">Portable 360-degree sound with deep bass and waterproof design.</p>
                 <div class="product-price">$89</div>
-                <button class="buy-btn" onclick="window.location.href='cart.html'">Add to Cart</button>
+                <div class="card-buttons">
+                    <button class="buy-btn" onclick="window.location.href='cart.html'">Add to Cart</button>
+                    <a href="https://test-mu-ten-20.vercel.app/" target="_blank" class="tutorial-btn">📘 Tutorial</a>
+                </div>
             </div>
         </div>
     </section>
